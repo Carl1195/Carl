@@ -3,6 +3,7 @@ config t
 router eigrp 31
 no auto-summary
 network 10.31.100.0 0.0.0.255
+end
 
 @Corebaba
 config t
@@ -22,6 +23,43 @@ network 10.31.31.0 0.0.0.255
 
 router ospf 1
 router-id 31.0.0.1
-network 200.0.0.0 0.0.0.255. area 0
+network 200.0.0.0 0.0.0.255 area 0
 network 31.0.0.1 0.0.0.0 area 0
 end
+
+@
+ping www.ustp.edu.ph
+get the ip
+nmap -sP 172.67.167.0/24
+nmap -v 172.67.167.51
+
+
+@commands
+sh ip eigrp nei
+sh ip route eigrp
+show ip eigrp topology
+(pwede rin ospf)
+sh ip protocols
+
+sh int gi 0/0/0
+
+k1 bandwith = 1000
+k2 delay
+k3 
+k4
+sh int gi 0/0/0
+
+
+$edge
+config t
+router ospf 1
+  redistribute eigrp 31 subnets
+router eigrp 31
+  redistribute ospf 1 Metric 1000000 1 255 1 1500
+end
+
+sh run | sec ospf
+
+
+
+@FUNDAMENTALS OF CYBER SECURITY. ATTAC
