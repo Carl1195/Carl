@@ -27,6 +27,15 @@ network 200.0.0.0 0.0.0.255 area 0
 network 31.0.0.1 0.0.0.0 area 0
 end
 
+$edge
+config t
+router ospf 1
+  redistribute eigrp 31 subnets
+router eigrp 31
+  redistribute ospf 1 Metric 1000000 1 255 1 1500
+end
+
+
 @
 ping www.ustp.edu.ph
 get the ip
@@ -49,14 +58,6 @@ k3
 k4
 sh int gi 0/0/0
 
-
-$edge
-config t
-router ospf 1
-  redistribute eigrp 31 subnets
-router eigrp 31
-  redistribute ospf 1 Metric 1000000 1 255 1 1500
-end
 
 sh run | sec ospf
 
