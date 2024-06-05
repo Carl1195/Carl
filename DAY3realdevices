@@ -1,0 +1,27 @@
+@cucm:
+config t
+router eigrp 31
+no auto-summary
+network 10.31.100.0 0.0.0.255
+
+@Corebaba
+config t
+router eigrp 31
+no auto-summary
+network 10.31.100.0 0.0.0.255
+network 10.31.50.0 0.0.0.255
+network 10.31.10.0 0.0.0.255
+network 10.31.1.0 0.0.0.255
+network 10.31.31.0 0.0.0.255
+
+@Edge
+config t
+router eigrp 31
+no auto-summary
+network 10.31.31.0 0.0.0.255
+
+router ospf 1
+router-id 31.0.0.1
+network 200.0.0.0 0.0.0.255. area 0
+network 31.0.0.1 0.0.0.0 area 0
+end
