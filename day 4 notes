@@ -17,4 +17,12 @@ guestshell enable
   
 @in Python
 in python 
-  
+
+@para mura na siya cellphone
+restconf
+netconf-yang
+
+
+headers:
+	Accept: application/yang-data+json
+	Content-Type: application/yang-data+json
