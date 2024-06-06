@@ -1,0 +1,20 @@
+guestshell enable
+
+  guestshell run python
+
+  
+  guestshell run bash
+  sudo su
+
+@orig
+  int gi 1
+  ip add 192.168.108.7 255.255.255.0
+  no shut
+  ip route 0.0.0.0 0.0.0.0 192.168.108.2
+
+
+  sh ip int br
+  
+@in Python
+in python 
+  
