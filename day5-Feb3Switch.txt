@@ -317,6 +317,9 @@ do sh port-security address
    1    ccd8.c1fb.2325    SecureSticky                  Fa0/8
 do sh int status err-disable
 
+
+
+
 @baba: make it alive:
 config t
 Int fa0/6
